@@ -4,6 +4,8 @@ public class Day1{
     private static String[] elf_names = {"Glitter", "Chocolate","Tiny","Snowflake","Frosty"};
 
     public static String generateElfName(String name){
-        return "";  
+        if (name == null || name.equals(""))
+            throw new IllegalArgumentException("Name cannot be null or empty");
+        return elf_names[(int)(Math.random() * elf_names.length)] + name;
     }
 }
